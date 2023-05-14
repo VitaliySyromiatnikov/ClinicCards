@@ -15,14 +15,13 @@ describe('Login page', () => {
   it.only('passes', () => {
      
     loginPage.getLoginPageButton().first().click()
-
+    
     //Check that we are in login page
     cy.contains("Вхід")
-
     loginPage.getPasswordField().type("dsadas")
- 
     loginPage.getSubmitFormButton().click()
 
+    //Check email error message
     loginPage.getEmailErrorButton().contains("Введіть коректний Email")
   
   })
