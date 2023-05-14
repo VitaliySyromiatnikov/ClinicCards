@@ -1,4 +1,4 @@
-deletFor running test you should do few steps 
+For running test you should do few steps 
 1.Install Node.modules -  https://nodejs.org/en/download 
 2.Copy repository 
 3.Open command prompt and install Cypress dependencies - npm install cypress --save-dev 
