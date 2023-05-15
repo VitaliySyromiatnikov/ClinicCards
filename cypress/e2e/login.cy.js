@@ -12,17 +12,17 @@ describe('Login page', () => {
 })
   
   const loginPage = new LoginPage();
-  it.only('passes', () => {
+  it.only('Cannot login without filled data', () => {
      
     loginPage.getLoginPageButton().first().click()
     
     //Check that we are in login page
     cy.contains("Вхід")
-    loginPage.getPasswordField().type("dsadas")
+
     loginPage.getSubmitFormButton().click()
 
     //Check email error message
-    loginPage.getEmailErrorButton().contains("Введіть коректний Email")
-  
+    loginPage.getEmailErrorMessage().contains("Введіть коректний Email")
+    loginPage.getPasswordErrorMessage().contains("Введіть пароль")
   })
 })
